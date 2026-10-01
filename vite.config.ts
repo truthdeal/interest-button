@@ -1,5 +1,5 @@
 import { defineConfig, loadEnv, type Plugin } from 'vite'
-import { sendInterestNtfy } from './lib/sendNtfy.ts'
+import { sendInterestNtfy } from './api/sendNtfy.ts'
 
 function ntfyApiDevPlugin(env: Record<string, string>): Plugin {
   return {
