@@ -1,5 +1,7 @@
-/** Barış'a mail gidecek endpoint buraya bağlanacak. */
 export async function sendInterestPing(): Promise<void> {
-  // TODO: POST /api/interest
-  await new Promise((resolve) => setTimeout(resolve, 350))
+  const response = await fetch('/api/interest', { method: 'POST' })
+
+  if (!response.ok) {
+    throw new Error('interest request failed')
+  }
 }
